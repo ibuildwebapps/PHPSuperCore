@@ -3,7 +3,7 @@
 
     require_once('./PHPSuperCore.php');
 
-    class primeConversionTracking extends PHPSuperCore
+    class example extends PHPSuperCore
     {
         public function __construct()
         {
@@ -45,4 +45,4 @@
         }
     }
 
-    new primeConversionTracking();
+    new example();
