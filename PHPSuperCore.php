@@ -5,8 +5,8 @@
     use Dotenv\Dotenv;
     use PhpAmqpLib\Connection\AMQPStreamConnection;
 
-    require_once('../vendor/autoload.php');
-    require_once('./Zetabase/class.Zetabase.php') ;
+    require_once('../../vendor/autoload.php');
+    require_once('../Zetabase/class.Zetabase.php') ;
 
     abstract class PHPSuperCore
     {
@@ -149,6 +149,12 @@
             $this->connectAllServices();
         }
 
+        protected function getDatabase()
+        {
+            //TODO: Confirm connection is live
+            return $this->database ;
+        }
+
         //This just helps keep our derived classes tidy
         abstract protected function messageProcessor() ;
 
@@ -177,5 +183,5 @@
     }
 
     //Make the env() available globally for anything which uses this class
-    $dotenv = Dotenv::createImmutable('..');
+    $dotenv = Dotenv::createImmutable('../..');
     $dotenv->load();
