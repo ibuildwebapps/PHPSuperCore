@@ -6,7 +6,7 @@
     use PhpAmqpLib\Connection\AMQPStreamConnection;
 
     require_once('../../vendor/autoload.php');
-    require_once('../Zetabase/class.Zetabase.php') ;
+    require_once('/var/www/hapi.cosmik-ltd.com/web/_cron/Zetabase/class.Zetabase.php') ;
 
     abstract class PHPSuperCore
     {
