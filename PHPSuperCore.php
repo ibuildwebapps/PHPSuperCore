@@ -5,7 +5,7 @@
     use Dotenv\Dotenv;
     use PhpAmqpLib\Connection\AMQPStreamConnection;
 
-    require_once('vendor/autoload.php');
+    require_once('../../vendor/autoload.php');
     require_once('../Zetabase/class.Zetabase.php') ;
 
     abstract class PHPSuperCore
